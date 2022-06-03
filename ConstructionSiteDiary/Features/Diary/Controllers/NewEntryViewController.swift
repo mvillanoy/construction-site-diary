@@ -81,7 +81,7 @@ class NewEntryViewController: UIViewController, CommentCardViewDelegate, DataCar
     }
     
     @IBAction func submit(_ sender: Any) {
-        
+        newEntryViewModel.submit()
     }
     
     @objc func exit() {

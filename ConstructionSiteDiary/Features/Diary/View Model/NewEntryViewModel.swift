@@ -2,7 +2,7 @@
 //  NewEntryViewModel.swift
 //  ConstructionSiteDiary
 //
-//  Created by Bayanihanets on 6/3/22.
+//  Created by Monica Villanoy on 6/3/22.
 //
 
 import Foundation
@@ -14,6 +14,10 @@ class NewEntryViewModel {
     var entry = Entry()
     
     
-
+    func submit(){
+        APIManager.shared().upload(type: EndpointItem.addEntry, params: entry.dictionary, images: images) { (values, error) in
+            print(values ?? "No data")
+        }
+    }
     
 }

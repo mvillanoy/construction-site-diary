@@ -63,9 +63,9 @@ extension EndpointItem: EndPointType {
     
     var baseURL: String {
         switch APIManager.networkEnviroment {
-            case .dev: return "https://api.dev.artemis.im/"
-            case .staging: return "https://api.staging.artemis.im/"
-            case .production: return "https://api.artemis.im"
+            case .dev: return "https://reqres.in/"
+            case .staging: return "https://reqres.in/"
+            case .production: return "https://reqres.in/"
         }
     }
     

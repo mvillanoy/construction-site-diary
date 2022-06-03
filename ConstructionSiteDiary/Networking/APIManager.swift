@@ -42,37 +42,38 @@ class APIManager {
     
     
     func upload(type: EndPointType, params: Parameters, images: [UIImage] = [], handler: @escaping ((NSDictionary)?, _ error: String?)->()) {
+        print(params)
  
         guard let url = try? URLRequest(url: type.url, method: type.httpMethod, headers: type.headers) else {return}
 
-        AF.upload(multipartFormData: { (multipartData) in
-                
-                for i in 0 ..< images.count{
-                    if let imageData = images[i].pngData(){
-                        let mediaName = "media\(i + 1)"
-                        multipartData.append(imageData, withName:mediaName, fileName: "\(Date().timeIntervalSince1970).jpg", mimeType: "file")
+        AF.upload(multipartFormData: { (multipartFormData : MultipartFormData) in
+            
+            for (key, value) in params {
+                    multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
+                }
+
+                    let count = images.count
+
+                    for i in 0..<count{
+                        multipartFormData.append(images[i].jpegData(compressionQuality: 0.8)!, withName: "image\(i)", fileName: "image\(i).jpeg", mimeType: "image/jpeg")
+
+                    }
+
+                    print(multipartFormData)
+        }, to: type.url).response { (response) in
+                    print(response)
+                    switch response.result {
+                    case .success(_):
+                            handler(nil, nil)
+
+                    case .failure(let encodingError):
+                        print("failed")
+                        print("\(encodingError.errorDescription)")
+                        handler(nil, encodingError.errorDescription)
+
                     }
                 }
-              for (key, value) in params {
-                    multipartData.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
-                }
-        }, to: url as! URLConvertible).responseJSON(queue: .main, options: .allowFragments) { (response) in
-                switch response.result{
-                case .success(_):
-                    do {
-                        let responseJSON = try JSONSerialization.jsonObject(with: response.data! as Data,  options:JSONSerialization.ReadingOptions(rawValue: 0))
-                        guard let JSONDictionary: NSDictionary = responseJSON as? NSDictionary else {
-                            handler((nil), "Error in parsing")
-                            return
-                        }
-                        handler((JSONDictionary), nil)
-                    } catch {
-                        handler((nil), "Error in parsing")
-                    }
-                case .failure(let error):
-                    handler((nil), error.localizedDescription)
-                }
-            }
+
     }
     
     

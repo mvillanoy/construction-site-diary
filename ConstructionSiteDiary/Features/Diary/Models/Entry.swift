@@ -2,7 +2,7 @@
 //  Entry.swift
 //  ConstructionSiteDiary
 //
-//  Created by Bayanihanets on 6/3/22.
+//  Created by Monica Villanoy on 6/3/22.
 //
 
 import Foundation
@@ -17,5 +17,17 @@ class Entry {
     var event:String?
     var comment:String?
     var task:String?
+    
+    var dictionary: [String: Any] {
+           return ["date": date ?? "",
+                   "lat": lat ?? 0,
+                   "long": long ?? 0,
+                   "area": area ?? "",
+                   "tags": tags ?? "",
+                   "event": event ?? "",
+                   "comment": comment ?? "",
+                   "task": task ?? "",
+           ]
+       }
 }
 
