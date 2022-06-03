@@ -6,6 +6,7 @@ target 'ConstructionSiteDiary' do
   use_frameworks!
   pod 'Alamofire'
   pod 'SimpleCheckbox'
+  pod 'AAPickerView', '~> 1.0'
 
   # Pods for ConstructionSiteDiary
 

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="H3I-fM-E8s" customClass="DataCardView" customModule="ConstructionSiteDiary" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="281"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfk-Ug-IXm">
+                    <rect key="frame" x="16" y="16" width="382" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="PrimaryText"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4r-KR-pcJ">
+                    <rect key="frame" x="16" y="53" width="382" height="1"/>
+                    <color key="backgroundColor" name="SecondaryText"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="riX-MO-UCt"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lq0-5h-Bzu" customClass="AAPickerView" customModule="AAPickerView">
+                    <rect key="frame" x="16" y="70" width="382" height="36"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" name="PrimaryText"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                            <color key="value" name="SecondaryText"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Area" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="awP-Th-Qe1" customClass="AAPickerView" customModule="AAPickerView">
+                    <rect key="frame" x="16" y="122" width="382" height="35.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" name="PrimaryText"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                            <color key="value" name="SecondaryText"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xvk-Ll-pfk" customClass="AAPickerView" customModule="AAPickerView">
+                    <rect key="frame" x="16" y="173.5" width="382" height="36"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" name="PrimaryText"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                            <color key="value" name="SecondaryText"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tags" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oEW-U9-g6v">
+                    <rect key="frame" x="16" y="225.5" width="382" height="35.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" name="PrimaryText"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                            <color key="value" name="SecondaryText"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="lFT-JU-cNw"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Tfk-Ug-IXm" firstAttribute="leading" secondItem="H3I-fM-E8s" secondAttribute="leading" constant="16" id="1jX-tB-xq4"/>
+                <constraint firstItem="Tfk-Ug-IXm" firstAttribute="top" secondItem="H3I-fM-E8s" secondAttribute="top" constant="16" id="2FQ-40-JiU"/>
+                <constraint firstItem="N4r-KR-pcJ" firstAttribute="top" secondItem="Tfk-Ug-IXm" secondAttribute="bottom" constant="16" id="3VV-vr-iqI"/>
+                <constraint firstItem="xvk-Ll-pfk" firstAttribute="top" secondItem="awP-Th-Qe1" secondAttribute="bottom" constant="16" id="3xd-kG-R8R"/>
+                <constraint firstItem="awP-Th-Qe1" firstAttribute="height" secondItem="lq0-5h-Bzu" secondAttribute="height" id="3ze-pp-uXT"/>
+                <constraint firstItem="N4r-KR-pcJ" firstAttribute="leading" secondItem="H3I-fM-E8s" secondAttribute="leading" constant="16" id="5fK-0r-7Mt"/>
+                <constraint firstItem="lFT-JU-cNw" firstAttribute="trailing" secondItem="oEW-U9-g6v" secondAttribute="trailing" constant="16" id="B1S-6Y-UB6"/>
+                <constraint firstItem="oEW-U9-g6v" firstAttribute="leading" secondItem="lFT-JU-cNw" secondAttribute="leading" constant="16" id="JMO-jX-F0C"/>
+                <constraint firstItem="awP-Th-Qe1" firstAttribute="leading" secondItem="lFT-JU-cNw" secondAttribute="leading" constant="16" id="M6H-Qp-YLz"/>
+                <constraint firstItem="xvk-Ll-pfk" firstAttribute="height" secondItem="lq0-5h-Bzu" secondAttribute="height" id="NxE-91-kBH"/>
+                <constraint firstItem="oEW-U9-g6v" firstAttribute="top" secondItem="xvk-Ll-pfk" secondAttribute="bottom" constant="16" id="O6Y-bX-tEf"/>
+                <constraint firstItem="awP-Th-Qe1" firstAttribute="top" secondItem="lq0-5h-Bzu" secondAttribute="bottom" constant="16" id="P2w-d5-5YB"/>
+                <constraint firstItem="lq0-5h-Bzu" firstAttribute="top" secondItem="N4r-KR-pcJ" secondAttribute="bottom" constant="16" id="WIu-QG-anF"/>
+                <constraint firstItem="lFT-JU-cNw" firstAttribute="trailing" secondItem="awP-Th-Qe1" secondAttribute="trailing" constant="16" id="Y0C-z3-NXy"/>
+                <constraint firstItem="lFT-JU-cNw" firstAttribute="bottom" secondItem="oEW-U9-g6v" secondAttribute="bottom" constant="20" id="aBh-Wn-Q72"/>
+                <constraint firstAttribute="trailing" secondItem="N4r-KR-pcJ" secondAttribute="trailing" constant="16" id="fwl-Up-5Pv"/>
+                <constraint firstItem="lq0-5h-Bzu" firstAttribute="leading" secondItem="lFT-JU-cNw" secondAttribute="leading" constant="16" id="lge-ye-G0z"/>
+                <constraint firstItem="lFT-JU-cNw" firstAttribute="trailing" secondItem="lq0-5h-Bzu" secondAttribute="trailing" constant="16" id="nj1-4b-ubn"/>
+                <constraint firstItem="lFT-JU-cNw" firstAttribute="trailing" secondItem="xvk-Ll-pfk" secondAttribute="trailing" constant="16" id="qkM-qq-ZJ3"/>
+                <constraint firstAttribute="trailing" secondItem="Tfk-Ug-IXm" secondAttribute="trailing" constant="16" id="tIo-kp-kca"/>
+                <constraint firstItem="xvk-Ll-pfk" firstAttribute="leading" secondItem="lFT-JU-cNw" secondAttribute="leading" constant="16" id="vhY-gj-4oV"/>
+                <constraint firstItem="oEW-U9-g6v" firstAttribute="height" secondItem="lq0-5h-Bzu" secondAttribute="height" id="xdq-5s-Fgf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="areaPicker" destination="awP-Th-Qe1" id="QyR-p1-myV"/>
+                <outlet property="datePicker" destination="lq0-5h-Bzu" id="0LX-vZ-99y"/>
+                <outlet property="tagsTextField" destination="oEW-U9-g6v" id="IJJ-pI-UHb"/>
+                <outlet property="taskPicker" destination="xvk-Ll-pfk" id="gMl-zj-VwX"/>
+            </connections>
+            <point key="canvasLocation" x="150.72463768115944" y="88.727678571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="PrimaryText">
+            <color red="0.3529999852180481" green="0.3529999852180481" blue="0.3529999852180481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryText">
+            <color red="0.69800001382827759" green="0.69800001382827759" blue="0.69800001382827759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

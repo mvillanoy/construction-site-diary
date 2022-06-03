@@ -1,20 +1,24 @@
 PODS:
+  - AAPickerView (1.3)
   - Alamofire (5.6.1)
   - SimpleCheckbox (2.1.0)
 
 DEPENDENCIES:
+  - AAPickerView (~> 1.0)
   - Alamofire
   - SimpleCheckbox
 
 SPEC REPOS:
   trunk:
+    - AAPickerView
     - Alamofire
     - SimpleCheckbox
 
 SPEC CHECKSUMS:
+  AAPickerView: 98fefdd9610a982e1a344e09192906154f868e1f
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   SimpleCheckbox: ddcd433ab8c3a8f57300bebda13151a8f302c7f9
 
-PODFILE CHECKSUM: 8a7d7c8d4035c170048b81c5d9b32af131d4bc1a
+PODFILE CHECKSUM: 174d9beaf2eb800a2c00ca2be39a7db8e1771bd3
 
 COCOAPODS: 1.10.2

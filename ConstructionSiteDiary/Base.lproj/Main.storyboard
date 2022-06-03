@@ -3,8 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,7 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9i-jD-FrQ">
-                                <rect key="frame" x="163.5" y="432.5" width="87.5" height="31"/>
+                                <rect key="frame" x="32" y="424" width="350" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="bfr-HJ-6hd"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add Entry">
                                     <color key="baseBackgroundColor" name="AccentColor"/>
@@ -28,10 +31,12 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pHe-I7-okh"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="d9i-jD-FrQ" firstAttribute="centerY" secondItem="4dD-co-l8O" secondAttribute="centerY" id="4OP-A2-IIg"/>
+                            <constraint firstItem="pHe-I7-okh" firstAttribute="trailing" secondItem="d9i-jD-FrQ" secondAttribute="trailing" constant="32" id="Y3W-Mk-xLw"/>
                             <constraint firstItem="d9i-jD-FrQ" firstAttribute="centerX" secondItem="4dD-co-l8O" secondAttribute="centerX" id="b2U-0s-Agp"/>
+                            <constraint firstItem="d9i-jD-FrQ" firstAttribute="leading" secondItem="pHe-I7-okh" secondAttribute="leading" constant="32" id="fOY-S0-c5d"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -44,8 +49,8 @@
         <namedColor name="AccentColor">
             <color red="0.55294117647058827" green="0.81568627450980391" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="BackgroundColor">
+            <color red="0.93699997663497925" green="0.95300000905990601" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
